@@ -1,0 +1,21 @@
+# ---------- Python / backend ----------
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.pytest_cache/
+
+# ---------- Node / frontend ----------
+node_modules/
+dist/
+.env.local
+.env.*.local
+
+# ---------- Editors and OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
