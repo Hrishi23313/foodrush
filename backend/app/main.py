@@ -2,10 +2,8 @@ from fastapi import Depends, FastAPI
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-
 from app.database import get_db
-from app.routes import auth
-
+from app.routes import auth, restaurants
 
 app = FastAPI(
     title="FoodRush API",
@@ -14,6 +12,7 @@ app = FastAPI(
 )
 
 app.include_router(auth.router)
+app.include_router(restaurants.router)
 
 
 @app.get("/")
