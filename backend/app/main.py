@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 
 from app.database import get_db
-from app.routes import auth, role_test
+from app.routes import auth
 
 
 app = FastAPI(
@@ -14,7 +14,6 @@ app = FastAPI(
 )
 
 app.include_router(auth.router)
-app.include_router(role_test.router)
 
 
 @app.get("/")
